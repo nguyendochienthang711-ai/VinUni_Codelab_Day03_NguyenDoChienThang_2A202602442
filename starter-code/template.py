@@ -21,6 +21,12 @@ Action: {{"name": "<tên tool>", "args": {{<tham số>}}}}
 Observation: <Kết quả từ tool>
 ... (Lặp lại cho tới khi có đủ dữ liệu)
 Final Answer: <Câu trả lời hoàn chỉnh cho khách hàng>
+
+Quy tắc quan trọng:
+- Nếu câu hỏi chỉ cần 1 tool, hãy gọi Action rồi NGAY SAU KHI nhận Observation, đưa ra Final Answer trong cùng lượt.
+- Nếu câu hỏi cần nhiều tool, hãy gọi từng tool một, mỗi lượt 1 Action.
+- Nếu câu hỏi KHÔNG cần tool (FAQ, chính sách chung), hãy đưa ra Final Answer ngay mà KHÔNG cần Action.
+- LUÔN kết thúc bằng "Final Answer:" khi đã có đủ thông tin.
 """
 
 
